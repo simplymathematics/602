@@ -105,11 +105,9 @@ def exercise08():
     # ------ Place code below here \/ \/ \/ ------
     quantity = 5
     hello = 'hello'
-    tmp = hello
-    for x in range(quantity):
-    	hello = hello + hello
-    hello_repeated
-    hello = tmp
+    hello_repeated = hello*quantity
+    print(hello_repeated)
+
     # ------ Place code above here /\ /\ /\ ------
 
     return quantity, hello, hello_repeated
@@ -144,13 +142,12 @@ def exercise10():
 
 
 def exercise11():
-    # Create a variable pi and set it to pi 10 decimal places out
-
-    # ------ Place code below here \/ \/ \/ ------
+	# Create a variable pi and set it to pi 10 decimal places out
+	# ------ Place code below here \/ \/ \/ ------
     import sys
-	import math
-	pi = round(math.pi,9)
-	print(pi)
+    import math
+    pi = round(math.pi,9)
+    print(pi)
     # ------ Place code above here /\ /\ /\ ------
     return pi
 
@@ -183,7 +180,7 @@ def exercise14():
     length = 50
     height = 10.2
     area = length * height
-    area_type (type(area))
+    area_type = (type(area))
     # ------ Place code above here /\ /\ /\ ------
     return area, length, height, area_type
 
@@ -192,7 +189,7 @@ def exercise15():
     # Calculate the distance covered by a car moving at 80 miles per hour for 3 hours
 
     # ------ Place code below here \/ \/ \/ ------
-    distance = 80 #miles per hour
+    speed_mph = 80 #miles per hour
     duration = 3 #hours
     distance = speed_mph * duration
     # ------ Place code above here /\ /\ /\ ------
