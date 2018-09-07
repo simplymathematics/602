@@ -164,8 +164,8 @@ def exercise12():
 
 def exercise13():
     # Create variables volume_sphere, r. Set r to 7 and calculate the volume of the sphere with r = 7 and assign it to volume_sphere
-
-    pi = 3.14159
+    import math
+    pi = math.pi
     # ------ Place code below here \/ \/ \/ ------
     r = 7
     volume_sphere = 4/3* pi* r**3
