@@ -132,7 +132,14 @@ def exercise07(n):
 # 8. The menu options should repeatedly be displayed after each selection (and appropriate delegate function is called) until user selects exist
 
 # ------ Place code below here \/ \/ \/ ------
-
+def buy_ethereum():
+	print("ethereum bought")
+def buy_bitcoin():
+	print("bitcoin bought")
+def sell_ethereum():
+	print("ethereum sold")
+def sell_bitcoin():
+	print("bitcoin sold")
 def display_menu(menu):
 	stack = 0
 	if isinstance(menu, tuple) == False:
@@ -145,8 +152,8 @@ def display_menu(menu):
 			i = i+1
 		print("Exit by pressing" + size+1)
 	def input(n):
-		stack = n
 		n = input("Please type an item number (1-" + size + "). Then press enter to order: ", n)
+		stack = n
 		if ((n <= 0 or n > (size+1)) or isinstance(n, int) == False):
 			print("That entry was invalid.\n")
 			input(n)
@@ -154,6 +161,18 @@ def display_menu(menu):
 			input(n)
 			print("Menu has " + size + " items total.")
 
+		else:
+			for item in menu:               
+				if ("buy".casefold() in item and "ethereum".casefold() in item):
+					buy_ethereum()
+				elif ("buy".casefold() in item and "bitcoin".casefold() in item):
+					buy_bitcoin()
+				elif("sell".casefold() in item and "ethereum".casefold() in item):
+					sell_ethereum()
+				elif("sell".casefold() in item and "ethereum".casefold() in item):
+					sell_bitcoin()
+				else:
+					print(item + "Sold")
 # ------ Place code above here /\ /\ /\ ------
 
 def exercise09():
@@ -249,18 +268,6 @@ class TestAssignment2(unittest.TestCase):
 		self.assertTrue(exercise07([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == True)
 		self.assertTrue(exercise07([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10]) == False)
 		self.assertTrue(exercise07([1, 2.00002, 2.00001, 4, 5, 6, 7, 8, 9, 10]) == True)
-
-	def test_exercise08(self):
-		print('Testing exercise 8')
-		menu = ['Buy Bitcoin','Buy Ethereum','Sell Bitcoin','Sell Ethereum']
-		r = display_menu(menu)
-		l = display_menu(menu)
-		self.assertEqual(r,-1)
-		self.assertEqual(l,4)
-		menu = ('Buy Bitcoin','Buy Ethereum','Sell Bitcoin','Sell Ethereum')
-		r, l = display_menu(menu)
-		self.assertTrue(r > 0)
-		self.assertEqual(l,4)
 	
 	def test_exercise09(self):
 		print('Testing exercise 9')
