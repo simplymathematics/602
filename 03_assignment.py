@@ -160,38 +160,38 @@ def exercise02():
 	data.wipe()
 	uuid.uuid4()
 
-# def exercise03():
-# 	'''
-# 	1. Avocado toast is expensive but enormously yummy. What's going on with avocado prices? Read about avocado prices on Kaggle (https://www.kaggle.com/neuromusic/avocado-prices/home)
-# 	2. Load the included avocado.csv file and display every line to the screen
-# 	3. Use the imported csv library
+def exercise03():
+	'''
+	1. Avocado toast is expensive but enormously yummy. What's going on with avocado prices? Read about avocado prices on Kaggle (https://www.kaggle.com/neuromusic/avocado-prices/home)
+	2. Load the included avocado.csv file and display every line to the screen
+	3. Use the imported csv library
 	
-# 	'''
+	'''
 
-# 	# ------ Place code below here \/ \/ \/ ------
+	# ------ Place code below here \/ \/ \/ ------
 
-# 	with open("avocado.csv") as file:
-# 		data = csv.reader(file)
-# 		for row in data:
-# 			print(row[1])
-# 	# ------ Place code above here /\ /\ /\ ------
+	with open("avocado.csv") as file:
+		data = csv.reader(file)
+		for row in data:
+			print(row[1])
+	# ------ Place code above here /\ /\ /\ ------
 
-# class TestAssignment3(unittest.TestCase):
-# 	def test_exercise01(self):
-# 		print('Testing exercise 1')
-# 		b1, b2, b3 = exercise01()
-# 		self.assertEqual(b1.get_length(),16)
-# 		self.assertEqual(b1.get_width(),28)
-# 		self.assertTrue(b1==Box(16,28))
-# 		self.assertEqual(b2.get_length(),6)
-# 		self.assertEqual(b2.get_width(),8)
-# 		self.assertEqual(b3.get_length(),5)
-# 		self.assertEqual(b2.get_hypot(),10)
-# 		self.assertEqual(b1.double().get_length(),32)
-# 		self.assertEqual(b1.double().get_width(),112)
-# 		self.assertTrue(6 in b2.get_dim())
-# 		self.assertTrue(8 in b2.get_dim())
-# 		self.assertTrue(b2.combine(Box(1,1))==Box(7,9))
+class TestAssignment3(unittest.TestCase):
+	def test_exercise01(self):
+		print('Testing exercise 1')
+		b1, b2, b3 = exercise01()
+		self.assertEqual(b1.get_length(),16)
+		self.assertEqual(b1.get_width(),28)
+		self.assertTrue(b1==Box(16,28))
+		self.assertEqual(b2.get_length(),6)
+		self.assertEqual(b2.get_width(),8)
+		self.assertEqual(b3.get_length(),5)
+		self.assertEqual(b2.get_hypot(),10)
+		self.assertEqual(b1.double().get_length(),32)
+		self.assertEqual(b1.double().get_width(),112)
+		self.assertTrue(6 in b2.get_dim())
+		self.assertTrue(8 in b2.get_dim())
+		self.assertTrue(b2.combine(Box(1,1))==Box(7,9))
 
 	def test_exercise02(self):
 		print('Testing exercise 2')
