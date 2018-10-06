@@ -136,7 +136,7 @@ def buy_ethereum():
 	print("ethereum bought")
 def buy_bitcoin():
 	print("bitcoin bought")
-def sell_ethereum():
+def sell_ethereum():ls
 	print("ethereum sold")
 def sell_bitcoin():
 	print("bitcoin sold")
