@@ -28,7 +28,6 @@ class Box(object):
 	
 	def get_length(self):
 		return self._length
-		
 	def get_width(self):
 		return self._width
 	
