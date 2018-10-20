@@ -73,10 +73,7 @@ class PandasChain:
             tmp = (block.get_values().tolist())
             values = values + tmp
         return values
-            
-        #while self.__current_block.__prev_hash != None:
-         #   print(self.__current_block)
-          #  self.__current_block = self.__prev_hash
+    
             
 class Block:
     # 5 pts for constructor
@@ -176,6 +173,9 @@ class TestAssignment4(unittest.TestCase):
         self.assertEqual(pandas_chain.get_number_of_blocks(),3)
         plt.plot(list(np.arange(1,1+len(pandas_chain.get_values()))),pandas_chain.get_values())
         plt.show()
+
+        
+        
 
 if __name__ == '__main__':
     unittest.main()
