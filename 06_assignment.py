@@ -110,7 +110,11 @@ def exercise08():
     '''
 
     # ------ Place code below here \/ \/ \/ ------
-
+    df = pd.read_csv("http://samplecsvs.s3.amazonaws.com/Sacramentorealestatetransactions.csv")
+    row_count = df.shape[0]
+    avg_sq_ft = np.mean(df['sq__ft'])
+    df_zip_95670 = df.loc[df['zip'] == 95670]
+    df_zip_not_95610 = df.loc[df['zip'] != 95610]
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -135,7 +139,7 @@ def exercise09():
 
     # ------ Place code below here \/ \/ \/ ------
 
-
+    
 
     # ------ Place code above here /\ /\ /\ ------    
     return df, plotly_url
@@ -156,8 +160,8 @@ def exercise11(n):
     '''
     # ------ Place code below here \/ \/ \/ ------
 
-
-
+    array_1d = np.array(range(n))
+    array_reshaped = array_1d.reshape((3, -1))
     # ------ Place code above here /\ /\ /\ ------  
     return array_1d, array_reshaped
 
@@ -167,8 +171,8 @@ def exercise12(n):
     A checkerboard matrix is a matrix with alternating 1s and 0s across rows and columns with the top left value equal to 1
     '''
     # ------ Place code below here \/ \/ \/ ------
-
-
+    
+    
 
     # ------ Place code above here /\ /\ /\ ------ 
 
@@ -181,8 +185,10 @@ def exercise13(n):
     
     '''
     # ------ Place code below here \/ \/ \/ ------
+    a = np.random.randint(1,n,n)
+    datelist = pd.date_range(start='1/1/2010', periods=n).tolist()
+    s = pd.Series(data=a, index = datelist)
 
-   
 
     # ------ Place code above here /\ /\ /\ ------ 
     return s
@@ -195,8 +201,7 @@ def exercise14(words):
     Using Series.map() and lambdas may help.
     '''
     # ------ Place code below here \/ \/ \/ ------
-
-   
+    df = pd.Series(np.array(words)).str.len
 
     # ------ Place code above here /\ /\ /\ ------ 
     return df
@@ -208,8 +213,8 @@ def exercise15():
     and just the street address and zip code columns. This can be done with one line of code.
     '''
     # ------ Place code below here \/ \/ \/ ------
-
-    
+    df = pd.read_csv("http://samplecsvs.s3.amazonaws.com/Sacramentorealestatetransactions.csv")
+    df.iloc[::5, :][['street', 'zip']]
 
     # ------ Place code above here /\ /\ /\ ------ 
     return df
