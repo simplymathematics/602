@@ -138,9 +138,24 @@ def exercise09():
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'}
 
     # ------ Place code below here \/ \/ \/ ------
-
+    import requests as re
+    import plotly
     
-
+    url = 'https://api.coindesk.com/v1/bpi/historical/close.json?start=2017-09-01&end=2018-10-05'
+    this  = re.get(url)
+    that = this.json()
+    df = pd.DataFrame(that)
+    df = df
+    df
+    df.drop('disclaimer', axis=1)
+    df.drop(df.tail(2).index)
+    ##plotly
+    plotly.tools.set_credentials_file(username='meyerscr', api_key='lmb30oiL8bdR27YuGakJ')
+    data =[plotly.graph_objs.Scatter(x = df.index, y = df['bpi'])]
+    plotly_url = plotly.plotly.iplot(data)
+    
+    print(df.head)
+    print(df.tail)
     # ------ Place code above here /\ /\ /\ ------    
     return df, plotly_url
 
@@ -171,9 +186,7 @@ def exercise12(n):
     A checkerboard matrix is a matrix with alternating 1s and 0s across rows and columns with the top left value equal to 1
     '''
     # ------ Place code below here \/ \/ \/ ------
-    
-    
-
+    checkerboard_matrix = np.array(([1,0]*n+[0,1]*n)*n).reshape((2*n, 2*n))
     # ------ Place code above here /\ /\ /\ ------ 
 
     return checkerboard_matrix
