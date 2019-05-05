@@ -69,8 +69,8 @@ def exercise05():
     # Repeate exercise 4 here and assign the datatype of the variable first_name to a variable called name_type
 
     # ------ Place code below here \/ \/ \/ ------
-    first_name = "Charlie"
-    last_name = "Meyers"
+    first_name = "first"
+    last_name = "last"
     name_type = type(first_name)
     # ------ Place code above here /\ /\ /\ ------
 
