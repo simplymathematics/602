@@ -37,7 +37,7 @@ def exercise02():
     # Create a variable called name and set it to your first name.
 
     # ------ Place code below here \/ \/ \/ ------
-    name = "Charlie"
+    name = "first"
     # ------ Place code above here /\ /\ /\ ------
 
     return name
@@ -57,8 +57,8 @@ def exercise04():
     # Create two variables. The first variable is called first_name, the second is last_name. Set both variables to your first name and last name respectively.
 
     # ------ Place code below here \/ \/ \/ ------
-    first_name = "Charlie"
-    last_name = "Meyers"
+    first_name = "first"
+    last_name = "last"
     # ------ Place code above here /\ /\ /\ ------
 
     return first_name, last_name
